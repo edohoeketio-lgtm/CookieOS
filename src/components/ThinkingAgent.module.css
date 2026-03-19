@@ -1,0 +1,103 @@
+.thinking {
+  background: var(--bg-alt);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+/* ── Left: Headline ── */
+.headline {
+  position: sticky;
+  top: 120px;
+}
+
+.bigText {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+  color: var(--gray-900);
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--gray-500);
+  max-width: 380px;
+  line-height: 1.65;
+}
+
+/* ── Right: Use Cases ── */
+.useCases {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.useCase {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--gray-200);
+  transition: all 250ms ease;
+  cursor: default;
+}
+
+.useCase:first-child {
+  padding-top: 0;
+}
+
+.useCase:last-child {
+  border-bottom: none;
+}
+
+.useCase:hover .useCaseTitle {
+  color: var(--blue);
+}
+
+.useCaseNumber {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gray-300);
+  min-width: 24px;
+  letter-spacing: -0.01em;
+}
+
+.useCaseTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  letter-spacing: -0.01em;
+  transition: color 200ms;
+}
+
+.useCaseArrow {
+  margin-left: auto;
+  color: var(--gray-300);
+  transition: color 200ms;
+}
+
+.useCase:hover .useCaseArrow {
+  color: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .headline {
+    position: static;
+    text-align: center;
+  }
+
+  .desc {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,156 @@
+.toolkit {
+  background: var(--bg-alt);
+  text-align: left;
+}
+
+.header {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto var(--space-2xl);
+}
+
+/* ── Hero Feature Cards ── */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.heroCard {
+  background: var(--white);
+  border-radius: 20px;
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-height: 260px;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.heroCard:hover {
+  transform: scale(1.015);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}
+
+.heroCard:first-child {
+  background: var(--gray-900);
+  color: var(--white);
+}
+
+.heroCard:first-child .heroDesc {
+  color: var(--gray-400);
+}
+
+.heroCard:first-child .heroBadge {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.7);
+}
+
+.heroIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--bg-alt);
+  color: var(--gray-900);
+}
+
+.heroCard:first-child .heroIcon {
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+}
+
+.heroTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.heroDesc {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.heroText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 5px 14px;
+  border-radius: 980px;
+  background: var(--bg-alt);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  letter-spacing: 0.01em;
+}
+
+/* ── Secondary Feature Grid ── */
+.secondaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.secondaryCard {
+  background: var(--white);
+  border-radius: 16px;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.secondaryCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.secondaryIcon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: var(--bg-alt);
+  color: var(--gray-700);
+}
+
+.secondaryTitle {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+
+.secondaryDesc {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .secondaryGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .heroGrid { grid-template-columns: 1fr; }
+  .heroCard { min-height: auto; }
+}
+
+@media (max-width: 480px) {
+  .secondaryGrid { grid-template-columns: 1fr; }
+}

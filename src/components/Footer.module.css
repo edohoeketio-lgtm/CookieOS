@@ -1,0 +1,116 @@
+.footer {
+  position: relative;
+}
+
+/* --- CTA Section --- */
+.cta {
+  position: relative;
+  padding: var(--space-4xl) 0;
+  text-align: center;
+  background: var(--bg-alt);
+}
+
+.ctaMesh { display: none; }
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaHeadline {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin-bottom: var(--space-md);
+  color: var(--gray-900);
+}
+
+.ctaHeadline .gradient-text {
+  color: var(--gray-900);
+}
+
+.ctaDesc {
+  font-size: 1.05rem;
+  color: var(--gray-500);
+  margin-bottom: var(--space-xl);
+  max-width: 400px;
+}
+
+/* --- Footer Bottom --- */
+.bottom {
+  padding: var(--space-xl) var(--space-lg);
+  border-top: 1px solid var(--gray-200);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footerLogo {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gray-900);
+}
+
+.footerTagline {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.colTitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gray-900);
+  margin-bottom: 2px;
+}
+
+.footerLink {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  transition: color 200ms;
+}
+
+.footerLink:hover {
+  color: var(--blue);
+}
+
+.copyright {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--gray-200);
+}
+
+.copyright p {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+}
+
+@media (max-width: 768px) {
+  .footerGrid { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
+  .footerBrand { grid-column: span 2; }
+}
+
+@media (max-width: 480px) {
+  .footerGrid { grid-template-columns: 1fr; }
+  .footerBrand { grid-column: span 1; }
+}
