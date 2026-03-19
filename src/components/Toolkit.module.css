@@ -1,5 +1,5 @@
 .toolkit {
-  background: var(--bg-alt);
+  background: var(--white);
   text-align: left;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .heroCard {
-  background: var(--white);
+  background: var(--bg-alt);
   border-radius: 20px;
   padding: var(--space-xl) var(--space-xl) var(--space-lg);
   display: flex;
@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: var(--bg-alt);
+  background: var(--white);
   color: var(--gray-900);
 }
 
@@ -85,10 +85,11 @@
 
 .heroBadge {
   display: inline-flex;
+  align-items: center;
   align-self: flex-start;
   padding: 5px 14px;
   border-radius: 980px;
-  background: var(--bg-alt);
+  background: var(--white);
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--gray-500);
@@ -103,7 +104,7 @@
 }
 
 .secondaryCard {
-  background: var(--white);
+  background: var(--bg-alt);
   border-radius: 16px;
   padding: var(--space-lg);
   display: flex;
@@ -124,7 +125,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 11px;
-  background: var(--bg-alt);
+  background: var(--white);
   color: var(--gray-700);
 }
 

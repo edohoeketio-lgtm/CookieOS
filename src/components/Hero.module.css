@@ -1,46 +1,99 @@
 .hero {
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 52px;
   text-align: center;
+  background-color: var(--bg-alt);
+}
+
+.glow {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(168,85,247,0.12) 0%, rgba(59,130,246,0.12) 40%, rgba(255,255,255,0) 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 900px;
 }
 
 .headline {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.04em;
   color: var(--gray-900);
-  margin-bottom: var(--space-lg);
+  margin-bottom: 24px;
 }
 
 .subtext {
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-size: 1.35rem;
   font-weight: 400;
   color: var(--gray-500);
-  max-width: 460px;
   line-height: 1.6;
-  margin-bottom: var(--space-xl);
+  margin: 0 auto 48px;
+  max-width: 580px;
+  text-wrap: balance;
 }
 
 .actions {
   display: flex;
   gap: var(--space-md);
   align-items: center;
+  justify-content: center;
+}
+
+.ctaButton {
+  background-color: #0071e3;
+  color: white;
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 980px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.25);
+  transition: all 400ms cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: #0077ed;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 113, 227, 0.35);
+}
+
+.downloadIcon {
+  margin-left: 6px;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
     padding: var(--space-4xl) 0 var(--space-3xl);
+  }
+
+  .glow {
+    width: 600px;
+    height: 600px;
   }
 
   .actions {

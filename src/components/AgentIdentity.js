@@ -8,12 +8,11 @@ export default function AgentIdentity() {
       <div className={`container ${styles.wrapper}`}>
         <div className={styles.text}>
           <ScrollReveal>
-            <p className="section-label">Your Personal Agent</p>
-            <h2 className="section-title">
-              Your Agent Has Its Own<br />
-              <span className="gradient-text">Identity & Computer</span>
+            <p className={styles.sectionLabel}>Your Personal Agent</p>
+            <h2 className={styles.headline}>
+              Your Agent Has Its Own Identity & Computer
             </h2>
-            <p className="section-subtitle">
+            <p className={styles.sectionSubtitle}>
               Your agent runs in its own space you can watch in real time — signs up for services,
               manages its own accounts, and you see exactly what it sees.
             </p>

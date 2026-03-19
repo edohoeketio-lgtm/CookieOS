@@ -5,9 +5,9 @@
 /* --- CTA Section --- */
 .cta {
   position: relative;
-  padding: var(--space-4xl) 0;
+  padding: 80px 0;
   text-align: center;
-  background: var(--bg-alt);
+  background: var(--white);
 }
 
 .ctaMesh { display: none; }
@@ -16,26 +16,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--gray-900);
+  padding: 80px 40px;
+  border-radius: 32px;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.05);
+  margin: 0 auto;
+}
+
+.ctaContent > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ctaHeadline {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.08;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
   margin-bottom: var(--space-md);
-  color: var(--gray-900);
-}
-
-.ctaHeadline .gradient-text {
-  color: var(--gray-900);
+  color: var(--white);
 }
 
 .ctaDesc {
-  font-size: 1.05rem;
-  color: var(--gray-500);
-  margin-bottom: var(--space-xl);
-  max-width: 400px;
+  font-size: 1.15rem;
+  color: var(--gray-400);
+  margin: 0 auto 40px;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.ctaButtonDark {
+  background-color: var(--white);
+  color: var(--gray-900);
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 980px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+  transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 300ms;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.ctaButtonDark:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.25);
 }
 
 /* --- Footer Bottom --- */

@@ -1,14 +1,42 @@
 .identity {
   position: relative;
+  background: var(--bg-alt);
 }
 
 .glow { display: none; }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3xl);
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
   align-items: center;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--gray-900);
+  margin-bottom: var(--space-md);
+  text-wrap: balance;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+  margin-bottom: var(--space-sm);
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--gray-500);
+  max-width: 480px;
+  line-height: 1.65;
 }
 
 .visual {
@@ -18,9 +46,9 @@
 }
 
 .agentCard {
-  background: var(--bg-alt);
+  background: var(--white);
   border-radius: 24px;
-  padding: var(--space-xl) var(--space-lg);
+  padding: 32px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +56,7 @@
   width: 280px;
   position: relative;
   z-index: 2;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
 .avatarRing {
@@ -46,7 +75,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: var(--bg-alt);
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +90,7 @@
   height: 14px;
   border-radius: 50%;
   background: #34c759;
-  border: 2.5px solid var(--bg-alt);
+  border: 2.5px solid var(--white);
 }
 
 .agentInfo { text-align: center; }

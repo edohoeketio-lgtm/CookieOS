@@ -1,5 +1,6 @@
 .faq {
   position: relative;
+  background: var(--bg-alt);
 }
 
 .header {

@@ -6,19 +6,15 @@ export default function Footer() {
     <footer className={styles.footer}>
       {/* CTA Section */}
       <section className={styles.cta} id="cta">
-        <div className={styles.ctaMesh}>
-          <div className={styles.ctaOrb1}></div>
-          <div className={styles.ctaOrb2}></div>
-        </div>
         <div className={`container ${styles.ctaContent}`}>
           <ScrollReveal>
             <h2 className={styles.ctaHeadline}>
-              Give your desktop <span className="gradient-text">a brain.</span>
+              Give your desktop a brain.
             </h2>
             <p className={styles.ctaDesc}>
               Download CookieOS and put your AI agent to work. No cloud. No setup. Just results.
             </p>
-            <a href="#" className="btn btn--primary">
+            <a href="#download" className={styles.ctaButtonDark}>
               Download for macOS
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
